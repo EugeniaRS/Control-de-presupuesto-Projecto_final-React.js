@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.modal {
+    position: absolute;
+    background-color: rgb(0 0 0 / 0.92);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.modal .formularioMod {
+    text-align: center;
+    max-width: 80rem;
+    width: 35rem;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in;
+    opacity: 0;
+    margin: auto;
+}
+
+.modal .formularioMod.animar {
+    position: relative;
+    opacity: 1;
+}
+
+.modal .boton-cerrar {
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+.modal .boton-cerrar img {
+    width: 100%;
+}
+
+.modal .formularioMod.cerrar {
+    opacity: 0;
+}
+
+.alerta {
+    padding: 2rem 5rem;
+    max-width: 60rem;
+    margin: 2rem auto 2rem auto;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.alerta.error {
+    background-color: rgb(254 226 226);
+    /*    border: 2px solid #b91c1c; */
+    border-left: 5px solid #b91c1c;
+    color: rgb(185 28 28);
+}
+
+.sombra {
+    box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
+    -webkit-box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
+    background-color: white;
+    padding: 4rem;
+    border-radius: 1.2rem;
+}
+
+.descripcion-gasto .categoria {
+    color: #94a3b8;
+    font-size: 1.6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: initial;
+}
+
+.descripcion-gasto .nombre-gasto {
+    color: #64748b;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: initial;
+}
+
+.contenido-gasto {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contenido-gasto img {
+    width: 10rem;
+}
+
+.descripcion-gasto .fecha-gasto {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #64748b;
+    text-align: initial;
+}
+
+.descripcion-gasto .fecha-gasto span {
+    font-weight: 400;
+}
+
+.cantidad-gasto {
+    font-size: 2.4rem;
+    color: black;
+    font-weight: 900;
+}
+
+.fijar {
+    overflow: hidden;
+    height: 100vh;
+}
+
+
+/*** SWIPE LIST OVERRIDES **/
+
+.swipe-action__leading {
+    background-color: rgb(165 180 252);
+    color: rgb(55 48 163);
+    margin-bottom: 2rem;
+}
+
+.swipe-action__trailing {
+    background-color: rgb(55 48 163);
+    margin-bottom: 2rem;
+    color: rgb(237 233 254);
+}
+
+.swipeable-list .swipe-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4rem;
+    text-align: right;
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+    font-size: 0.7rem !important;
+}
+
+.filtros .campo {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.filtros select {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    text-align: center;
+    background-color: rgb(245 245 245);
+    font-size: 1rem;
+}
+
+.contenido-presupuesto {
+    width: 100%;
+    text-align: center;
+}
+
+.contenido-presupuesto p {
+    font-weight: 400;
+    color: rgb(100 116 139);
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+.contenido-presupuesto span {
+    font-weight: 900;
+    color: rgb(139, 92, 246);
+}
+
+.contenido-presupuesto p.negativo,
+.contenido-presupuesto p.negativo span {
+    color: red;
+}
+
+@media (min-width: 768px) {
+    .formularioMod {
+        padding: 5rem 0;
+        width: 60rem;
+    }
+}
